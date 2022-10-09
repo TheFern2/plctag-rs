@@ -8,9 +8,10 @@ use crate::*;
 use std::{
     ffi::{c_void, CString},
     thread,
-    time::{Duration, Instant},
-    serde::{Serialize, Deserialize}
+    time::{Duration, Instant}
 };
+
+use serde::{Serialize, Deserialize};
 
 /// wrapper of tag model based on `libplctag`
 #[derive(Debug, Serialize, Deserialize)]

@@ -9,10 +9,11 @@ use std::{
     ffi::{c_void, CString},
     thread,
     time::{Duration, Instant},
+    serde::{Serialize, Deserialize}
 };
 
 /// wrapper of tag model based on `libplctag`
-#[derive(Debug)]
+#[derive(Debug, Serialize, Deserialize)]
 pub struct RawTag {
     tag_id: i32,
 }
